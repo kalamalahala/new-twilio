@@ -1,0 +1,188 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+#wpcontent {
+    padding-left: 0px !important;
+}
+
+div.wrap {
+    margin-top:0px !important;
+}
+
+.navbar {
+    padding-left: 20px !important;
+}
+
+.content-wrap {
+    padding-left: 20px !important;
+    margin-top: 10px;
+}
+
+div.card {
+    padding: 0 !important;
+}
+
+.table-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    /* border: 1px solid red; */
+    background: rgb(187,215,230);
+    /* background: linear-gradient(90deg, rgba(187,215,230,0.7777311608237045) 0%, rgba(9,9,121,0.6096639339329482) 35%, rgba(0,212,255,1) 100%);  */
+}
+
+#twilio-csv-contacts-table {
+    background: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#twilio-csv-messages-table {
+    background: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#twilio-csv-recruits-table {
+    background: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#twilio-csv-pending-hires-table {
+    background: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+div.dataTables_wrapper {
+    margin: 20px;
+}
+
+.messages-wrapper {
+    max-height: 20rem;
+    overflow-y: scroll;
+    font-size: 14px;
+    display:flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgba(187, 215, 230, 0.459) 0%, rgba(9, 9, 121, 0.185) 35%, rgba(0, 213, 255, 0.493));
+}
+
+
+.inbound-message {
+    background: #2374ec;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    max-width: 65%;
+    display:flex;
+    flex-direction: column;
+    align-self: flex-start;
+    border-radius: 15px;
+    --webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+
+}
+
+.outbound-message {
+    background: #f5f5f5;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 65%;
+    display:flex;
+    align-self: flex-end;
+    flex-direction: column;
+    border-radius: 15px;
+    --webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+.message-body {
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.messages-wrapper .inbound-message small {
+    padding:0;
+    font-size: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.messages-wrapper .outbound-message small {
+    padding:0;
+    font-size: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+table.dataTable tbody tr.alert-success {
+    background-color: #d4f0db;
+}
+
+table.dataTable tbody tr.alert-danger {
+    background-color: #F8D7DA;
+}
+
+.final-wrap p {
+    font-size: 18px;
+}
+
+.final-wrap label {
+    font-weight: bold;
+}
+
+.final-interview-name {
+    font-weight: bold;
+    color: #4A86E8;
+}
+
+.candidate-wrapper {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.candidate-wrapper .candidate-name {
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+form p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+.question-group {
+    font-size: 14px;
+}
+
+.interview-submit {
+    margin-top: 20px;
+}
+
+.scheduled-follow-ups {
+    overflow-y: scroll;
+    max-height:245px;
+    max-width: 40rem;
+    background: red;
+    padding: 0;
+}
+
+.follow-ups {
+    padding: 0;
+    margin-left:15px;
+    list-style: none;
+}

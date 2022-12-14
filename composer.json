@@ -1,0 +1,13 @@
+{
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.22",
+        "twilio/sdk": "^6.43",
+        "sendgrid/sendgrid": "^8.0",
+        "eluceo/ical": "^2.7"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}

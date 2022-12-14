@@ -1,0 +1,522 @@
+@use "sass:map";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$custom-colors: (
+    'primary': #2b5497,
+    'secondary': #382b97,
+    'success': #46b450,
+    'warning': #ffb900,
+    'danger': #dc3232,
+    'info': #00a0d2,
+    'light': #eee,
+    'dark': #222,
+    'white': #fff,
+    'black': #000,
+    'gray': #aaa,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+// @import "~bootstrap/scss/accordion";
+// @import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/alert";
+// @import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+// @import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/spinners";
+// @import "~bootstrap/scss/offcanvas";
+// @import "~bootstrap/scss/placeholders";
+
+@import "~bootstrap/scss/utilities/api";
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; 
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+
+@import "~flatpickr/dist/flatpickr.css";
+
+
+
+// bootstrap modifications
+.pagination > .active > a {
+    background-color: map.get($theme-colors, 'primary') !important;
+}
+
+// datatables modifications
+// .dnc-contact-row {
+//     background-color: #189118;
+// }
+
+.results_container {
+    background-color: rgba(63, 191, 63, 0.22);
+    color: #eee;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9em;
+    border: solid 2px green;
+    border-radius: 12px;
+}
+
+.send_single_form_container {
+    font-size: 1em;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.required {
+    color: red;
+}
+
+#csv-submit {
+    background-color: #2CBC63;
+    color: #f9f9f9;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9em;
+    border-radius: 12px;
+    animation: button-animation 0.5s ease-in-out;
+    padding: 0.7em 1.4em;
+    margin-top: 20px;
+}
+
+#csv-submit:hover {
+    background-color: #2CBC63;
+    color: #f9f9f9;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9em;
+    border-radius: 12px;
+    animation: button-animation 0.5s ease-in-out;
+}
+
+.twilio-csv-viewer label {
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+.twilio-body {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.confirm-twilio {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 15px;
+
+}
+
+.confirm-twilio input[type="checkbox"] {
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    margin-bottom: 10px;
+}
+
+// input[name="body"] {
+//     border-radius: 12px;
+//     padding: 10px 150px 15px 15px;
+//     margin-left: 30px;
+// }
+
+
+
+input:hover+label,
+input:focus+label {
+    transform: scale(1.02);
+}
+
+input:focus+label {
+    outline: 1px solid #000;
+    outline: -webkit-focus-ring-color auto 2px;
+}
+
+.file-name {
+    position: absolute;
+    bottom: -35px;
+    left: 10px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+
+.header-box {
+    background: rgba(63, 191, 63, 0.22);
+}
+
+.twilio-wrap .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.footer-box {
+    background: rgb(254, 254, 254);
+    background: linear-gradient(90deg, rgba(254, 254, 254, 1) 0%, rgba(83, 139, 161, 1) 100%);
+    color: #f9f9f9;
+    /* margin: auto; */
+    padding: 10px 0;
+    max-height: 100px;
+}
+
+.header-box {
+    background: rgb(254, 254, 254);
+    background: linear-gradient(90deg, rgba(254, 254, 254, 1) 0%, rgba(83, 139, 161, 1) 100%);
+}
+
+.copyright-info {
+    font-size: 0.8rem;
+    color: #f9f9f9;
+    text-align: right;
+}
+
+.copyright-info a {
+    color: #f9f9f9;
+}
+
+.copyright-info a:hover {
+    color: rgba(44, 188, 99, 1);
+    cursor: pointer;
+}
+
+.user-pic {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
+    /* circle */
+    border-radius: 50%;
+    background: var(--twilio-csv-light-color);
+    /* display image with 1/1 aspect ratio and don't stretch */
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    /* center image in the element */
+    object-position: center;
+    /* hide the overflowing part of the image */
+    overflow: hidden;
+    /* make the image responsive */
+    max-width: 120px;
+
+}
+
+.left-box {
+    word-wrap: break-word;
+    background: var(--twilio-csv-left-gradient);
+    overflow-y: scroll;
+
+    /* max height is distance to the top of the footer */
+    max-height: calc(100vh - 100px);
+    font-size: var(--twilio-csv-font-size-lg);
+}
+
+.left-box .nav {
+    padding: 30px 1rem;
+    background-color: var(--twilio-csv-light-color);
+    border-bottom: 1px solid var(--twilio-csv-light-color);
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
+}
+
+.left-box .nav-link {
+    color: map.get($custom-colors, "primary");
+    border-radius: 10px !important;
+    text-decoration: none;
+}
+
+.nav-pills > .active, .nav-pills > .active:hover, .nav-pills > .active:focus {
+    color: map.get($theme-colors, "white");
+    background-color: map.get($custom-colors, "primary") !important;
+}
+
+.nav-pills a.nav-link {
+    color: map.get($custom-colors, "dark");
+}
+
+.right-box {
+    word-wrap: break-word;
+    background: map.get($theme-colors, "light");
+    overflow-y: scroll;
+    overflow-x: scroll;
+    /* max height is distance to the top of the footer */
+    height: calc(100vh - 100px);
+}
+
+.welcome-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--twilio-csv-black-color);
+}
+
+#twilio-csv-public-view-contacts-table {
+    font-size: 0.9em;
+}
+
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ #wpcontent {
+    padding-left: 0px !important;
+}
+
+div.wrap {
+    margin-top:0px !important;
+}
+
+.navbar {
+    padding-left: 20px !important;
+}
+
+.content-wrap {
+    padding-left: 20px !important;
+    margin-top: 10px;
+}
+
+div.card {
+    padding: 0 !important;
+}
+
+.table-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    /* border: 1px solid red; */
+    background: rgb(187,215,230);
+    /* background: linear-gradient(90deg, rgba(187,215,230,0.7777311608237045) 0%, rgba(9,9,121,0.6096639339329482) 35%, rgba(0,212,255,1) 100%);  */
+}
+
+#twilio-csv-contacts-table {
+    background: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#twilio-csv-messages-table {
+    background: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#twilio-csv-recruits-table {
+    background: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#twilio-csv-pending-hires-table {
+    background: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+div.dataTables_wrapper {
+    margin: 20px;
+}
+
+.messages-wrapper {
+    max-height: 20rem;
+    overflow-y: scroll;
+    font-size: 14px;
+    display:flex;
+    flex-direction: column;
+    // background: linear-gradient(180deg, rgba(187, 215, 230, 0.459) 0%, rgba(9, 9, 121, 0.185) 35%, rgba(0, 213, 255, 0.493));
+    background-color: map.get($theme-colors, "light");
+    padding: 10px;
+}
+
+
+.inbound-message {
+    background: #2374ec;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    max-width: 65%;
+    display:flex;
+    flex-direction: column;
+    align-self: flex-start;
+    border-radius: 15px;
+    --webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+
+}
+
+.outbound-message {
+    background: #f5f5f5;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 65%;
+    display:flex;
+    align-self: flex-end;
+    flex-direction: column;
+    border-radius: 15px;
+    --webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+.message-body {
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.messages-wrapper .inbound-message small {
+    padding:0;
+    font-size: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.messages-wrapper .outbound-message small {
+    padding:0;
+    font-size: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+table.dataTable tbody tr.alert-success {
+    background-color: #d4f0db;
+}
+
+table.dataTable tbody tr.alert-danger {
+    background-color: #F8D7DA;
+}
+
+.final-wrap p {
+    font-size: 18px;
+}
+
+.final-wrap label {
+    font-weight: bold;
+}
+
+.final-interview-name {
+    font-weight: bold;
+    color: #4A86E8;
+}
+
+.candidate-wrapper {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.candidate-wrapper .candidate-name {
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+form p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+.question-group {
+    font-size: 14px;
+}
+
+.interview-submit {
+    margin-top: 20px;
+}
+
+.scheduled-follow-ups {
+    overflow-y: scroll;
+    max-height:245px;
+    max-width: 40rem;
+    background: red;
+    padding: 0;
+}
+
+.follow-ups {
+    padding: 0;
+    margin-left:15px;
+    list-style: none;
+}
+
+.chat-wrapper {
+    border: 2px solid map.get($custom-colors, "white");
+    background-color: map.get($custom-colors, "white");
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+input[type=text], input[type=search], input[type=tel], input[type=email], input[type=number], textarea, select {
+    background-color: map.get($custom-colors, "white") !important;
+    border: 1px solid map.get($custom-colors, "light") !important;
+    border-radius: 10px !important;
+    color: map.get($custom-colors, "dark") !important;
+    font-size: 14px !important;
+}
+
+.full-overlay-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-container {
+    background: map.get($custom-colors, "white");
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.loading-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.loading-body-content {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
